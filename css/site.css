@@ -122,8 +122,9 @@ footer a {
 }
 
 #nav-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-around;
 }
 
 #copyright {
