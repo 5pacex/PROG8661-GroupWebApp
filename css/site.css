@@ -1,6 +1,27 @@
-html, body {
+html,
+body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+main {
+    min-height: 500px;
 }
 
 body {
@@ -9,7 +30,7 @@ body {
 
 header {
     background-color: black;
-    height: 40px;;
+    height: 40px;
 
     line-height: 40px;
     color: white;
@@ -18,7 +39,112 @@ header {
 }
 
 nav {
-    height: 140px;
     display: flex;
-    box-shadow: -1px 3px 7px 0 rgba(0,0,0,.04);
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+    box-shadow: -1px 3px 7px 0 rgba(0, 0, 0, .04);
+}
+
+nav a:link,
+nav a:visited,
+nav a:active {
+    color: black;
+}
+
+nav a:hover {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+}
+
+#logo {
+    width: 140px;
+    height: 100%;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+#searchbar {
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    border: 1px solid #303030;
+}
+
+#searchbox {
+    height: 100%;
+    width: 340px;
+    margin-left: 20px;
+    border: none;
+}
+
+#search {
+    display: inline-block;
+    width: 20px;
+    height: 100%;
+}
+
+#search img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+nav a {
+    display: inline-block;
+}
+
+.icon,
+.nav-text {
+    vertical-align: middle;
+}
+
+.nav-text {
+    margin-left: 10px;
+}
+
+#menu {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+
+footer a {
+    opacity: 0.7;
+}
+
+#nav-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#copyright {
+    margin-top: 40px;
+    font-family: 'serif';
+    font-style: italic;
+    text-align: center;
+}
+
+footer .icon {
+    background-color: white;
+    border-radius: 5px;
+}
+
+ul {
+    text-indent: 0;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+
+ul li {
+    margin-top: 10px;
 }
