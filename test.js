@@ -25,6 +25,7 @@ $(document).ready(function () {
       console.log($(this).attr("id"));
       var cartData = $(this).attr("id");
 
+      return;
       let productName = $(this).closest(".product").find(".product-content")[0]
         .children[0].innerHTML;
       let productPrice = $(this).closest(".product").find(".product-content")[0]
