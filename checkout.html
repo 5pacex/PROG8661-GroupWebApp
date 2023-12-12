@@ -20,8 +20,10 @@
             </div>
             <div id="menu">
                 <a href="products.html">Shop</a>
-                <a href="shopping_cart.html"><img class="icon" src="images/cart.png" alt="shopping cart"><span
-                        class="nav-text">Cart</span></a>
+                <a href="shopping_cart.html"><img class="icon" src="images/cart.png" alt="shopping cart">
+                    <span=======<a href="cart.html"><img class="icon" src="images/cart.png" alt="shopping cart"><span>
+                            class="nav-text">Cart</span>
+                </a>
                 <a href="login.html"><img class="icon" src="images/user.png" alt="login"><span
                         class="nav-text">Login</span></a>
             </div>
@@ -38,10 +40,12 @@
                                 <th>Subtotal</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="products">
+                        </tbody>
+                        <tfoot>
                             <tr>
                                 <td>Subtotal</td>
-                                <td id="subtotalBeforeTax"></td>
+                                <td id="subtotal"></td>
                             </tr>
                             <tr>
                                 <td>HST(13%)</td>
@@ -51,7 +55,7 @@
                                 <td>Total</td>
                                 <td id="total"></td>
                             </tr>
-                        </tbody>
+                        </tfoot>
                     </table>
                 </div>
                 <div id="shipping-details">
@@ -170,6 +174,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="./js/api.js"></script>
     <script src="./js/checkout.js"></script>
 </body>
 
