@@ -101,6 +101,7 @@ body {
 }
 
 .product {
+  cursor: pointer;
   margin: 30px;
   width: 250px;
   background-color: #fff;

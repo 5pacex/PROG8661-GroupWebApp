@@ -5,7 +5,7 @@ $(document).ready(function () {
   products.forEach((product) => {
     const productDiv = $('<div class="product">');
     productDiv.html(`
-    <img src="${product.image}" alt="${[product.name]}}">
+    <img src="${product.image}" alt="${[product.name]} id=${product.id}">
      <div class="product-content">
       <div class="product-title">${product.name}</div>
      <div class="product-price">$${product.price}</div>
@@ -16,6 +16,11 @@ $(document).ready(function () {
     productListDiv.append(productDiv);
   });
 
+  $(".product img").click((e) => {
+    e.preventDefault();
+    console.log($(this).attr("id"));
+  });
+
   // add to cart button event listener
   $(".btn-add-to-cart").click(function (e) {
     e.preventDefault();
@@ -24,19 +29,11 @@ $(document).ready(function () {
     } else {
       console.log($(this).attr("id"));
       var cartData = $(this).attr("id");
-
-      let productName = $(this).closest(".product").find(".product-content")[0]
-        .children[0].innerHTML;
-      let productPrice = $(this).closest(".product").find(".product-content")[0]
-        .children[2].innerHTML;
-
       localStorage.setItem(
         "cart",
         JSON.stringify([
-          {
-            productName: productName,
-            productPrice: productPrice,
-          },
+          ...(JSON.parse(localStorage.getItem("cart")) || []),
+          cartData,
         ])
       );
 

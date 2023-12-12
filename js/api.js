@@ -4,21 +4,24 @@ const products = [
     name: "Milk Chocolate Bar",
     price: 3.99,
     description: "Smooth and creamy milk chocolate.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolate1.jpg",
+    quantity: 1,
   },
   {
     id: 2,
     name: "Dark Chocolate Truffles",
     price: 5.99,
     description: "Rich and decadent dark chocolate truffles.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolate2.jpg",
+    quantity: 1,
   },
   {
     id: 3,
     name: "White Chocolate Assortment",
     price: 7.99,
     description: "A delightful assortment of sweet white chocolates.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolate3.jpg",
+    quantity: 1,
   },
   {
     id: 4,
@@ -27,6 +30,7 @@ const products = [
     description:
       "Crunchy hazelnuts blended with smooth praline in a chocolate bar.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ const products = [
     description:
       "Indulge in these heart-shaped chocolates with gooey caramel centers.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 6,
@@ -43,6 +48,7 @@ const products = [
     description:
       "Dark chocolate infused with natural orange zest for a citrusy twist.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 7,
@@ -51,6 +57,7 @@ const products = [
     description:
       "Crunchy almond pieces embedded in a delectable chocolate bark.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 8,
@@ -58,6 +65,7 @@ const products = [
     price: 5.49,
     description: "Delicious chocolates filled with raspberry-flavored ganache.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 9,
@@ -65,6 +73,7 @@ const products = [
     price: 4.99,
     description: "Refreshing mint-flavored chocolate squares for a cool treat.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 10,
@@ -73,6 +82,7 @@ const products = [
     description:
       "Classic peanut butter filling encased in smooth milk chocolate.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 11,
@@ -80,6 +90,7 @@ const products = [
     price: 7.49,
     description: "Decadent truffles with a coconut-infused chocolate ganache.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 12,
@@ -88,6 +99,7 @@ const products = [
     description:
       "Sweet and salty caramel-filled chocolates for a delightful contrast.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 13,
@@ -96,6 +108,7 @@ const products = [
     description:
       "Clusters of cherries and almonds enrobed in smooth milk chocolate.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 14,
@@ -103,6 +116,7 @@ const products = [
     price: 11.99,
     description: "Creamy white chocolate with the crunch of pistachio nuts.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 15,
@@ -111,6 +125,7 @@ const products = [
     description:
       "Luxurious truffles infused with the rich flavor of Irish cream.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 16,
@@ -118,6 +133,7 @@ const products = [
     price: 9.49,
     description: "Chocolates inspired by the flavors of blueberry cheesecake.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 17,
@@ -126,6 +142,7 @@ const products = [
     description:
       "Dark chocolate squares filled with tangy pomegranate ganache.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 18,
@@ -134,6 +151,7 @@ const products = [
     description:
       "Decadent truffles infused with the essence of strawberry and champagne.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 19,
@@ -142,6 +160,7 @@ const products = [
     description:
       "A spicy and sweet combination of chili and mango in a chocolate bar.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
   {
     id: 20,
@@ -150,5 +169,6 @@ const products = [
     description:
       "Dark chocolate with the intense flavor of espresso beans for coffee lovers.",
     image: "https://via.placeholder.com/150",
+    quantity: 1,
   },
 ];
