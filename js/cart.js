@@ -1,26 +1,70 @@
 $(document).ready(function () {
-  let cartItems = JSON.parse(localStorage.getItem("cart"));
-  const productListDiv = $(".cartitems");
-  for (i = 0; i < cartItems.length; i++) {
-    products.forEach((product) => {
-      if (product.id == cartItems[i]) {
-        const productDiv = $('<div class="cartitems">');
-        productDiv.html(`
-    <img src="${product.image}" alt="${[product.name]} id=${product.id}">
-     <div class="product-content">
-      <div class="product-title">${product.name}</div>
-     <div class="product-price">$${product.price}</div>
-     <button class="removeItem" id=${product.id}>Delete</button>
-   </div>
-                </div>
-    `);
-        productListDiv.append(productDiv);
+  loadProducts();
+  $(".removeItem").click(function () {
+    removeFromCart($(this).attr("id"));
+    reloadProducts();
+  });
+
+  $("#checkout").click(function() {
+    window.location.href = "./checkout.html";
+  });
+});
+
+const reloadProducts = () => {
+  $("#cart").empty();
+  loadProducts();
+}
+
+const loadProducts = () => {
+  const cart = loadCartData();
+  for (i = 0; i < cart.length; i++) {
+    const product = findProductById(cart[i].id);
+    const subtotal = product.price * cart[i].quantity;
+    const spinnerId = `spinner-${product.id}`;
+    const subtotalId = `subtotal-${product.id}`;
+    const html = `
+    <tr>
+      <td>
+        <button class="removeItem" id=${product.id}>Delete</button>
+        <img class="product-icon" src="${product.image}" alt="${[product.name]}">
+        ${product.name}
+      </td>
+      <td>
+        <div class="product-price">$${product.price}</div>
+      </td>
+      <td><input id="${spinnerId}" value="${cart[i].quantity}"></td>
+      <td id="${subtotalId}">${subtotal}</td>
+    </tr>
+    `;
+    $("#cart").append(html);
+
+    $("#" + spinnerId).spinner({
+      min: 1,
+      spin: function (event, ui) {
+        const newQuantity = ui.value;
+        changeQuantity(product.id, newQuantity);
+        $("#" + subtotalId).text(product.price * newQuantity);
+        updateTotal();
       }
     });
   }
-  $(".removeItem").click(function () {
-    let id = $(this).attr("id");
-    const newCartItems = cartItems.filter((items) => items !== id);
-    localStorage.setItem("cart", JSON.stringify(newCartItems));
-  });
-});
+
+  updateTotal();
+}
+
+const updateTotal = () => {
+  const cart = loadCartData();
+  let subtotal = 0;
+  for (i = 0; i < cart.length; i++) {
+    const product = findProductById(cart[i].id);
+    subtotal += product.price * cart[i].quantity;
+  }
+
+  $("#subtotal").text(toDollar(subtotal));
+
+  const hst = (subtotal * HST).toFixed(2);
+  $("#hst").html(toDollar(hst));
+
+  const total = (subtotal * (1 + HST)).toFixed(2);
+  $("#total").text(toDollar(total));
+}

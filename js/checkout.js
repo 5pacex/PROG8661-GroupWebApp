@@ -95,17 +95,16 @@ $(function () {
 });
 
 // load products from shopping cart, then calculate total price.
-const HST = 0.13;
 const loadProducts = () => {
-    const cart = JSON.parse(localStorage.getItem("cart"));
+    const cart = loadCartData();
     let html;
     let subtotal = 0;
     for(let item of cart) {
-        let product = products[item];
-        let quantity = 1;
+        let product = findProductById(item.id);
+        let quantity = item.quantity;
 
         let price = product.price * quantity;
-        html += `<tr><td><img src="${product.image}">${product.name} X ${quantity}</td><td>${toDollar(price)}</td>`
+        html += `<tr><td><img class="product-icon" src="${product.image}">${product.name} X ${quantity}</td><td>${toDollar(price)}</td>`
         subtotal += product.price * quantity; 
     }
 
@@ -117,8 +116,4 @@ const loadProducts = () => {
 
     const total = (subtotal * (1 + HST)).toFixed(2);
     $("#total").text(toDollar(total));
-}
-
-const toDollar = (num) => {
-    return "$" + num;
 }

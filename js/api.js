@@ -172,3 +172,19 @@ const products = [
     quantity: 1,
   },
 ];
+
+const findProductById = (id) => {
+  id = parseInt(id);
+  for (const product of products) {
+    if (product.id == id) {
+      return product;
+    }
+  }
+  return null;
+}
+
+const toDollar = (num) => {
+    return "$" + num;
+}
+
+const HST = 0.13;

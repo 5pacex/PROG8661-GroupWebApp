@@ -28,15 +28,7 @@ $(document).ready(function () {
       window.location.href = "cart.html";
     } else {
       console.log($(this).attr("id"));
-      var cartData = $(this).attr("id");
-      localStorage.setItem(
-        "cart",
-        JSON.stringify([
-          ...(JSON.parse(localStorage.getItem("cart")) || []),
-          cartData,
-        ])
-      );
-
+      addToCart($(this).attr("id"));
       $(this).css("background-color", "#a33115");
 
       $(this).text("Proceed to Checkout");
