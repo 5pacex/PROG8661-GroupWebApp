@@ -45,3 +45,7 @@ const saveCartData = (cart) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+const clearCartData = () => {
+  saveCartData([]);
+}
+

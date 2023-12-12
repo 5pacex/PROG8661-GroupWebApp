@@ -406,5 +406,6 @@ label.error {
 }
 
 #cart-empty {
+  color: red;
   text-align: center;
 }

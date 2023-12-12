@@ -1,6 +1,7 @@
 $(function () {
     $.validator.setDefaults({
         submitHandler: function () {
+            clearCartData();
             $("#submit-dialog").dialog("open");
         }
     });
