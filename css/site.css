@@ -25,6 +25,8 @@ a:hover {
 main {
   min-height: 500px;
   padding: 0 35px;
+  text-align: center;
+  margin: auto;
 }
 
 main h1 {
@@ -109,6 +111,17 @@ body {
   margin: 20px;
 }
 
+#loadProducts {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e44d26;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .product {
   cursor: pointer;
   margin: 30px;
@@ -172,6 +185,38 @@ body {
 .btn-add-to-cart:hover {
   background-color: #333;
 }
+
+/* ... (previous CSS code) ... */
+
+.customer-reviews {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.rating {
+  color: #e47911; /* Star color */
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.review {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.review p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.reviewer {
+  font-style: italic;
+  color: #777;
+}
+
+/* ... (remaining CSS code) ... */
 
 header {
   background-color: rgb(123, 63, 0);
@@ -295,7 +340,15 @@ ul li {
   margin-top: 10px;
 }
 
-.product-icon {
+#order-details,
+#shipping-details {
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: -1px 3px 7px 0 rgba(0, 0, 0, 0.1);
+}
+
+#products img {
   width: 50px;
   margin: 0 10px;
   vertical-align: middle;
@@ -362,8 +415,13 @@ label.error {
 
 .row label {
   margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
+.row input,
+.row textarea {
+  border: 1px solid rgb(218, 218, 218);
+  padding: 10px 20px;
 .row input,
 .row textarea {
   border: 1px solid rgb(218, 218, 218);

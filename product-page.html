@@ -18,8 +18,8 @@
                 <a id="search" href="products.html"><img class="icon" src="images/search.png"></a>
             </div>
             <div id="menu">
-                <a href="products.html">Shop</a>
-                <a href="cart.html"><img class="icon" src="images/cart.png" alt="shopping cart"><span
+                <a href="product_listings.html">Shop</a>
+                <a href="shopping_cart.html"><img class="icon" src="images/cart.png" alt="shopping cart"><span
                         class="nav-text">Cart</span></a>
                 <a href="login.html"><img class="icon" src="images/user.png" alt="login"><span
                         class="nav-text">Login</span></a>
@@ -28,17 +28,57 @@
 
         <main>
             <div class="product-details">
-                <img class="product-image" src="https://www.example.com/chocolate1.jpg" alt="Product Image">
-                <div class="title">Milk Chocolate Bar</div>
-                <div class="description">
+                <img class="product-image" src="#" id="product_image">
+                <div class="title" id="product_title">Milk Chocolate Bar</div>
+                <div class="description" id="product_description">
                     <p>Smooth and creamy milk chocolate.</p>
                 </div>
-                <div class="price">$3.99</div>
+                <div class="price" id="product_price">$3.99</div>
                 <button class="btn-add-to-cart">Buy now</button>
             </div>
+
+            <!-- ... (previous HTML code) ... -->
+
+            <div class="customer-reviews">
+                <h3>Customer Reviews:</h3>
+
+                <div class="review">
+                    <p>"Absolutely delicious! The best milk chocolate I've ever tasted."</p>
+                    <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="reviewer">- Jane D.</p>
+                </div>
+
+                <div class="review">
+                    <p>"I'm addicted to this chocolate bar. It's my guilty pleasure!"</p>
+                    <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="reviewer">- John S.</p>
+                </div>
+
+                <div class="review">
+                    <p>"Smooth, creamy, and satisfying. I highly recommend it!"</p>
+                    <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="reviewer">- Emily M.</p>
+                </div>
+
+                <div class="review">
+                    <p>"The packaging is classy, and the chocolate is pure bliss."</p>
+                    <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="reviewer">- Michael R.</p>
+                </div>
+
+                <div class="review">
+                    <p>"Great value for money. I'll be ordering more for sure!"</p>
+                    <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <p class="reviewer">- Sarah L.</p>
+                </div>
+
+                <!-- Add more reviews as needed -->
+
+            </div>
+
+            <!-- ... (remaining HTML code) ... -->
+
         </main>
-
-
 
 
         <footer>
@@ -79,7 +119,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/api.js"></script>
-    <script src="js/test.js"></script>
+    <script src="js/products.js"></script>
 </body>
 
 </html>

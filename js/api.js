@@ -29,7 +29,7 @@ const products = [
     price: 4.49,
     description:
       "Crunchy hazelnuts blended with smooth praline in a chocolate bar.",
-    image: "https://via.placeholder.com/150",
+    image: "images/OREO-BAG.jpg",
     quantity: 1,
   },
   {
@@ -38,7 +38,7 @@ const products = [
     price: 6.99,
     description:
       "Indulge in these heart-shaped chocolates with gooey caramel centers.",
-    image: "https://via.placeholder.com/150",
+    image: "images/ESTA-TRUFFLE.jpg",
     quantity: 1,
   },
   {
@@ -47,7 +47,7 @@ const products = [
     price: 8.99,
     description:
       "Dark chocolate infused with natural orange zest for a citrusy twist.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolate1.jpg",
     quantity: 1,
   },
   {
@@ -56,7 +56,7 @@ const products = [
     price: 9.99,
     description:
       "Crunchy almond pieces embedded in a delectable chocolate bark.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolate2.jpg",
     quantity: 1,
   },
   {
@@ -64,7 +64,7 @@ const products = [
     name: "Raspberry Filled Chocolates",
     price: 5.49,
     description: "Delicious chocolates filled with raspberry-flavored ganache.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolate3.jpg",
     quantity: 1,
   },
   {
@@ -72,7 +72,7 @@ const products = [
     name: "Mint Chocolate Squares",
     price: 4.99,
     description: "Refreshing mint-flavored chocolate squares for a cool treat.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolatebox1.jpeg",
     quantity: 1,
   },
   {
@@ -81,7 +81,7 @@ const products = [
     price: 6.49,
     description:
       "Classic peanut butter filling encased in smooth milk chocolate.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolatebox2.jpeg",
     quantity: 1,
   },
   {
@@ -89,7 +89,7 @@ const products = [
     name: "Coconut Chocolate Truffles",
     price: 7.49,
     description: "Decadent truffles with a coconut-infused chocolate ganache.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolatebox3.jpeg",
     quantity: 1,
   },
   {
@@ -98,7 +98,7 @@ const products = [
     price: 8.49,
     description:
       "Sweet and salty caramel-filled chocolates for a delightful contrast.",
-    image: "https://via.placeholder.com/150",
+    image: "images/chocolatebox4.jpeg",
     quantity: 1,
   },
   {
@@ -107,7 +107,7 @@ const products = [
     price: 10.99,
     description:
       "Clusters of cherries and almonds enrobed in smooth milk chocolate.",
-    image: "https://via.placeholder.com/150",
+    image: "images/CHRISTMAS-BOX.jpeg",
     quantity: 1,
   },
   {
@@ -115,7 +115,7 @@ const products = [
     name: "Pistachio White Chocolate Bar",
     price: 11.99,
     description: "Creamy white chocolate with the crunch of pistachio nuts.",
-    image: "https://via.placeholder.com/150",
+    image: "images/CHRISTMAS.jpeg",
     quantity: 1,
   },
   {
@@ -124,7 +124,7 @@ const products = [
     price: 12.99,
     description:
       "Luxurious truffles infused with the rich flavor of Irish cream.",
-    image: "https://via.placeholder.com/150",
+    image: "images/ESTA-TRUFBOX.jpeg",
     quantity: 1,
   },
   {
@@ -132,7 +132,7 @@ const products = [
     name: "Blueberry Cheesecake Chocolates",
     price: 9.49,
     description: "Chocolates inspired by the flavors of blueberry cheesecake.",
-    image: "https://via.placeholder.com/150",
+    image: "images/ESTA-3BOX-TRUFFLES.jpg",
     quantity: 1,
   },
   {
@@ -141,7 +141,7 @@ const products = [
     price: 7.99,
     description:
       "Dark chocolate squares filled with tangy pomegranate ganache.",
-    image: "https://via.placeholder.com/150",
+    image: "images/PRETZELS-10717sm.jpeg",
     quantity: 1,
   },
   {
@@ -150,7 +150,7 @@ const products = [
     price: 13.49,
     description:
       "Decadent truffles infused with the essence of strawberry and champagne.",
-    image: "https://via.placeholder.com/150",
+    image: "images/RED-CHRISTMAS-10624sm.jpeg",
     quantity: 1,
   },
   {
@@ -159,7 +159,7 @@ const products = [
     price: 8.99,
     description:
       "A spicy and sweet combination of chili and mango in a chocolate bar.",
-    image: "https://via.placeholder.com/150",
+    image: "images/vegan-truffles.png",
     quantity: 1,
   },
   {
