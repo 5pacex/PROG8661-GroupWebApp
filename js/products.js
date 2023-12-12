@@ -21,13 +21,13 @@ $(document).ready(function () {
   };
   displayProducts(startIndex, endIndex);
 
-  $(".product img").click(function (e) {
+  $("#product-list").on("click", ".product img", function (e) {
     var selectedProductID = $(this).attr("id");
     window.location.href = `product-page.html?id=${selectedProductID}`;
   });
 
   // add to cart button event listener
-  $(".btn-add-to-cart").click(function (e) {
+  $("#product-list").on("click", ".btn-add-to-cart", function (e) {
     e.preventDefault();
     if ($(this).text() == "Proceed to Checkout") {
       window.location.href = "cart.html";
