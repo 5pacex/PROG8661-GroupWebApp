@@ -32,15 +32,10 @@ $(document).ready(function () {
     if ($(this).text() == "Proceed to Checkout") {
       window.location.href = "cart.html";
     } else {
-      console.log($(this).attr("id"));
       addToCart($(this).attr("id"));
       $(this).css("background-color", "#a33115");
       $(this).text("Proceed to Checkout");
     }
-    //  to fetch data in carts page use the follow code
-    // JSON.parse(localStorage.getItem("cart")).map((item) => {
-    //   console.log(item.productName, item.productPrice);
-    // });
   });
 
   $("#loadProducts").click(() => {
@@ -54,7 +49,12 @@ $(document).ready(function () {
     const productId = urlParams.get("id");
 
     const productDetails = products.find((product) => product.id == productId);
-
+    $(".bxslider").bxSlider();
+    $("#accordion").accordion({
+      heightStyle: "content",
+      collapsible: true,
+      active: false,
+    });
     // Update the HTML elements on the product page
     $("#product_image").attr("src", productDetails.image);
     $("#product_title").text(productDetails.name);

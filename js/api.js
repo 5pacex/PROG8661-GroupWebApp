@@ -168,7 +168,7 @@ const products = [
     price: 14.99,
     description:
       "Dark chocolate with the intense flavor of espresso beans for coffee lovers.",
-    image: "https://via.placeholder.com/150",
+    image: "images/RED-CHRISTMAS-10624sm.jpeg",
     quantity: 1,
   },
 ];
@@ -181,10 +181,10 @@ const findProductById = (id) => {
     }
   }
   return null;
-}
+};
 
 const toDollar = (num) => {
-    return "$" + num.toFixed(2);
-}
+  return "$" + num.toFixed(2);
+};
 
 const HST = 0.13;
