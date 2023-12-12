@@ -17,9 +17,18 @@ const reloadProducts = () => {
 
 const loadProducts = () => {
   const cart = loadCartData();
+  if (cart.length == 0) {
+    $("#cart-empty").show();
+    $("#checkout").attr("disabled", true);
+    return;
+  } else {
+    $("#cart-empty").hide();
+    $("#checkout").attr("disabled", false);
+  }
+
   for (i = 0; i < cart.length; i++) {
     const product = findProductById(cart[i].id);
-    const subtotal = product.price * cart[i].quantity;
+    const subtotal = toDollar(product.price * cart[i].quantity);
     const spinnerId = `spinner-${product.id}`;
     const subtotalId = `subtotal-${product.id}`;
     const html = `
@@ -43,7 +52,7 @@ const loadProducts = () => {
       spin: function (event, ui) {
         const newQuantity = ui.value;
         changeQuantity(product.id, newQuantity);
-        $("#" + subtotalId).text(product.price * newQuantity);
+        $("#" + subtotalId).text(toDollar(product.price * newQuantity));
         updateTotal();
       }
     });
@@ -62,9 +71,9 @@ const updateTotal = () => {
 
   $("#subtotal").text(toDollar(subtotal));
 
-  const hst = (subtotal * HST).toFixed(2);
+  const hst = subtotal * HST;
   $("#hst").html(toDollar(hst));
 
-  const total = (subtotal * (1 + HST)).toFixed(2);
+  const total = subtotal * (1 + HST);
   $("#total").text(toDollar(total));
 }

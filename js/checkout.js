@@ -111,9 +111,9 @@ const loadProducts = () => {
     $("#products").html(html);
     $("#subtotal").text(toDollar(subtotal));
     
-    const hst = (subtotal * HST).toFixed(2);
+    const hst = subtotal * HST;
     $("#hst").html(toDollar(hst));
 
-    const total = (subtotal * (1 + HST)).toFixed(2);
+    const total = subtotal * (1 + HST);
     $("#total").text(toDollar(total));
 }

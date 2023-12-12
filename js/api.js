@@ -184,7 +184,7 @@ const findProductById = (id) => {
 }
 
 const toDollar = (num) => {
-    return "$" + num;
+    return "$" + num.toFixed(2);
 }
 
 const HST = 0.13;

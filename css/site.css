@@ -24,7 +24,7 @@ a:hover {
 
 main {
   min-height: 500px;
-    padding: 0 35px;
+  padding: 0 35px;
 }
 
 main h1 {
@@ -57,6 +57,7 @@ body {
   border-radius: 8px;
   margin-bottom: 20px;
 }
+
 .product-image {
   width: 100%;
   max-height: 400px;
@@ -64,21 +65,26 @@ body {
   border-radius: 8px;
   margin-bottom: 15px;
 }
+
 .title {
   font-size: 44px;
   margin-bottom: 10px;
   color: #333;
 }
+
 .description {
   font-size: 24px;
   margin-bottom: 15px;
   color: #666;
 }
+
 .price {
   font-size: 24px;
   margin-bottom: 15px;
-  color: #e44d26; /* Orange color */
+  color: #e44d26;
+  /* Orange color */
 }
+
 .btn-add-to-cart {
   display: inline-block;
   padding: 10px 20px;
@@ -90,8 +96,10 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .btn-add-to-cart:hover {
-  background-color: #c43e21; /* Darker shade on hover */
+  background-color: #c43e21;
+  /* Darker shade on hover */
 }
 
 .products-listings {
@@ -166,8 +174,8 @@ body {
 }
 
 header {
-    background-color: rgb(123, 63, 0);
-    height: 40px;
+  background-color: rgb(123, 63, 0);
+  height: 40px;
 
   line-height: 40px;
   color: white;
@@ -249,10 +257,10 @@ nav a {
 }
 
 footer {
-    margin-top: 20px;
-    padding: 10px 20px;
-    color: white;
-    background-color: rgb(30, 30, 30);
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgb(30, 30, 30);
 }
 
 footer a {
@@ -288,94 +296,115 @@ ul li {
 }
 
 .product-icon {
-    width: 50px;
-    margin: 0 10px;
-    vertical-align: middle;
+  width: 50px;
+  margin: 0 10px;
+  vertical-align: middle;
 }
 
-#order-details table{
-    width: 100%;
-    margin: 0 auto;
-    border-collapse: collapse;
+#order-details table,
+#cart-total-table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
 }
 
-#order-details tbody {
-    border-bottom: 1px solid #ddd;
+#order-details tbody,
+#cart-total-table tbody {
+  border-bottom: 1px solid #ddd;
 }
 
 #order-details th {
-    text-align: left;
+  text-align: left;
 }
 
 #order-details tfoot td {
-    padding: 5px 0;
+  padding: 5px 0;
 }
 
-#order-details, #shipping-details {
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: -1px 3px 7px 0 rgba(0, 0, 0, 0.1);
+#order-details,
+#shipping-details,
+#cart-total,
+#cart-table {
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: -1px 3px 7px 0 rgba(0, 0, 0, 0.1);
 }
 
 #shipping-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 #shipping-form input.error {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 label.error {
-    color: red;
-    font-style: italic;
+  color: red;
+  font-style: italic;
 }
 
-#order-notes-wrapper, #submit-wrapper {
-    grid-column: 1 / 2 span;
+#order-notes-wrapper,
+#submit-wrapper {
+  grid-column: 1 / 2 span;
 }
 
 .row {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    font-size: 15px;
-    line-height: 24px;
-    padding-right: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 15px;
+  line-height: 24px;
+  padding-right: 20px;
+  margin-bottom: 20px;
 }
 
 .row label {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.row input, .row textarea {
-    border: 1px solid rgb(218, 218, 218);
-    padding: 10px 20px;
+.row input,
+.row textarea {
+  border: 1px solid rgb(218, 218, 218);
+  padding: 10px 20px;
 }
 
 .ui-selectmenu-button.ui-button {
-    width: 100%;
+  width: 100%;
 }
 
 #order-notes {
-    height: 200px;
+  height: 200px;
 }
 
 .submit {
-    padding: 15px 35px;
-    width: 200px;
-    margin: 0 auto;
-    background-color: #300E02;
-    color: white;
-    border-radius: 15px;
+  display: block;
+  padding: 15px 35px;
+  width: 200px;
+  margin: 0 auto;
+  background-color: #300E02;
+  color: white;
+  border-radius: 15px;
 }
 
-#cart-table {
-    width: 100%;
+.submit:disabled {
+  color: #555;
+}
+
+#cart-table,
+#cart-total-table {
+  width: 100%;
 }
 
 #cart-table th {
-    text-align: left;
+  text-align: left;
+}
+
+#cart-total button {
+  margin-top: 20px;
+}
+
+#cart-empty {
+  text-align: center;
 }
