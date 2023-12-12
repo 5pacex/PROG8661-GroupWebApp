@@ -35,7 +35,7 @@ const loadProducts = () => {
     <tr>
       <td>
         <button class="removeItem" id=${product.id}>Delete</button>
-        <img class="product-icon" src="${product.image}" alt="${[product.name]}">
+        <img class="icon" src="${product.image}" alt="${[product.name]}">
         ${product.name}
       </td>
       <td>
