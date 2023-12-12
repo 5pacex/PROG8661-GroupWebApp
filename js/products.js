@@ -19,6 +19,9 @@ $(document).ready(function () {
       productListDiv.append(productDiv);
     });
   };
+
+  //load products and BX slider
+  $(".bxslider").bxSlider();
   displayProducts(startIndex, endIndex);
 
   $("#product-list").on("click", ".product img", function (e) {
@@ -49,7 +52,7 @@ $(document).ready(function () {
     const productId = urlParams.get("id");
 
     const productDetails = products.find((product) => product.id == productId);
-    $(".bxslider").bxSlider();
+
     $("#accordion").accordion({
       heightStyle: "content",
       collapsible: true,
