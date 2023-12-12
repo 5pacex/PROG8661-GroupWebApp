@@ -287,6 +287,30 @@ ul li {
   margin-top: 10px;
 }
 
+#products img{
+    width: 50px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#order-details table{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#order-details tbody {
+    border-bottom: 1px solid #ddd;
+}
+
+#order-details th {
+    text-align: left;
+}
+
+#order-details tfoot td {
+    padding: 5px 0;
+}
+
 #order-details, #shipping-details {
     margin: 10px 0;
     padding: 20px;

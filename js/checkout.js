@@ -13,7 +13,7 @@ $(function () {
         buttons: {
             "Continue shopping": function () {
                 $(this).dialog("close");
-                window.location.href = "./product_listings.html";
+                window.location.href = "./products.html";
             }
         }
     });
@@ -91,4 +91,34 @@ $(function () {
     });
 
     $("#firstname").focus();
+    loadProducts();
 });
+
+// load products from shopping cart, then calculate total price.
+const HST = 0.13;
+const loadProducts = () => {
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    let html;
+    let subtotal = 0;
+    for(let item of cart) {
+        let product = products[item];
+        let quantity = 1;
+
+        let price = product.price * quantity;
+        html += `<tr><td><img src="${product.image}">${product.name} X ${quantity}</td><td>${toDollar(price)}</td>`
+        subtotal += product.price * quantity; 
+    }
+
+    $("#products").html(html);
+    $("#subtotal").text(toDollar(subtotal));
+    
+    const hst = (subtotal * HST).toFixed(2);
+    $("#hst").html(toDollar(hst));
+
+    const total = (subtotal * (1 + HST)).toFixed(2);
+    $("#total").text(toDollar(total));
+}
+
+const toDollar = (num) => {
+    return "$" + num;
+}
