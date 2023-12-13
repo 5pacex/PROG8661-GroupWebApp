@@ -1,4 +1,7 @@
-// Aayisha Sakkeer/ 8942453
+/*
+ * Aayisha
+ * Peng
+ */
 $(document).ready(function () {
   loadProducts();
   $(".removeItem").click(function () {
@@ -12,6 +15,7 @@ $(document).ready(function () {
 });
 
 const reloadProducts = () => {
+  // clear the display first then load it.
   $("#cart").empty();
   loadProducts();
 };
@@ -19,6 +23,7 @@ const reloadProducts = () => {
 const loadProducts = () => {
   const cart = loadCartData();
   if (cart.length == 0) {
+    // display a message if it's empty
     $("#cart-empty").show();
     $("#checkout").attr("disabled", true);
     return;
@@ -48,8 +53,10 @@ const loadProducts = () => {
     `;
     $("#cart").append(html);
 
+    // there is a different spinner for each row.
     $("#" + spinnerId).spinner({
       min: 1,
+      // change the HST and total value when the spinner value changes.
       spin: function (event, ui) {
         const newQuantity = ui.value;
         changeQuantity(product.id, newQuantity);
