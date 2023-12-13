@@ -1,3 +1,4 @@
+<!-- Abhishek Choudhary / 8939027 -->
 <!DOCTYPE html>
 
 <head>
@@ -5,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -13,13 +19,13 @@
             <div>Happy Holidays, UP TO 90% OFF</div>
         </header>
         <nav>
-            <a href="products.html"><img id="logo" src="images/logo.png"></a>
+            <a href="index.html"><img id="logo" src="images/logo.png"></a>
             <div id="searchbar">
                 <input id="searchbox" type="text" placeholder="What are you looking for">
-                <a id="search" href="products.html"><img class="icon" src="images/search.png"></a>
+                <a id="search" href="index.html"><img class="icon" src="images/search.png"></a>
             </div>
             <div id="menu">
-                <a href="products.html">Shop</a>
+                <a href="index.html">Shop</a>
                 <a href="cart.html"><img class="icon" src="images/cart.png" alt="shopping cart"><span
                         class="nav-text">Cart</span></a>
                 <a href="login.html"><img class="icon" src="images/user.png" alt="login"><span
@@ -29,117 +35,118 @@
 
         <main>
 
-            <!-- <div class="product-details">
-                <ul class="bxslider">
-                    <li><img src="" id="product_image" /></li>
-                    <li><img src="" id="product_image2" /></li>
+            <div class="product-container">
+                <div class="product-image-container">
+                    <img class="product-image" src="images/chocolate1.jpg" id="product_image">
+                    <div class="buttons">
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                        <button class="btn-add-to-cart">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="title" id="product_title">Milk Chocolate Bar</div>
+                    <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="price" id="product_price">$3.99</div>
+                    <div class="description" id="product_description">
+                        <p>Smooth and creamy milk chocolate.</p>
+                    </div>
+
+                    <div id="accordion">
+                        <h3>► Ingredients</h3>
+                        <div class="content">
+                            <p>Ingredients: Sugar, Cocoa Butter, Milk, Chocolate Liquor, Soy Lecithin (an
+                                emulsifier), and Artificial Flavor.</p>
+                        </div>
+
+                        <h3>► Caring for Your Chocolate</h3>
+                        <div class="content">
+                            <ul>
+                                <li>Store your chocolate in a cool, dry place.</li>
+                                <li>Avoid keeping it in the fridge as this can cause the chocolate to bloom
+                                    (develop a white coating on the surface).</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <h2>Related Products:</h2>
+
+            <div id="related-products-slider">
+                <div id="related-products-container" id="product-list">
+                    <!-- Your products will be appended here -->
+                </div>
+            </div>
+    </div>
+    <hr>
+    <h2>Write a Review:</h2>
+    </h3>
+    <div class="review-container">
+
+        <div class="write-review">
+            <form id="review-form">
+                <textarea id="reviewer-review" placeholder="Your Review" name="reviewer-review" required></textarea><br>
+                <select id="reviewer-rating" name="reviewer-rating" required>
+                    <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                    <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                    <option value="3">&#9733;&#9733;&#9733;</option>
+                    <option value="2">&#9733;&#9733;</option>
+                    <option value="1">&#9733;</option>
+                </select><br>
+                <input type="email" id="reviewer-email" placeholder="Email" name="reviewer-email" required>
+                <input type="text" id="reviewer-name" placeholder="Name" name="reviewer-name" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    </div>
+    </main>
+
+    <footer>
+        <div id="nav-container">
+            <div class="item">
+                <h3>Policies</h3>
+                <ul>
+                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="refound.html">Refund</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
                 </ul>
-                <div class="title" id="product_title">Milk Chocolate Bar</div>
-                <div class="description" id="product_description">
-                    <p>Smooth and creamy milk chocolate.</p>
-                </div>
-                <div class="price" id="product_price">$3.99</div>
-                <button class="btn-add-to-cart">Buy now</button>
-            </div> -->
-
-            <div class="product-details">
-                <img class="product-image" src="#" id="product_image">
-                <div class="title" id="product_title">Milk Chocolate Bar</div>
-                <div class="description" id="product_description">
-                    <p>Smooth and creamy milk chocolate.</p>
-                </div>
-                <div class="price" id="product_price">$3.99</div>
-                <div class="buttons"> <button class="btn-add-to-cart">Add to Cart</button> <button
-                        class="btn-add-to-cart">Buy
-                        now</button>
-                </div>
             </div>
-
-
-            <div class="customer-reviews">
-                <h2>Customer Reviews:</h2>
-
-                <div id="accordion">
-                    <h3>Review by Jane D.</h3>
-                    <div class="review">
-                        <p>"Absolutely delicious! The best milk chocolate I've ever tasted."</p>
-                        <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        <p class="reviewer">- Jane D.</p>
-                    </div>
-
-                    <h3>Review by John S.</h3>
-                    <div class="review">
-                        <p>"I'm addicted to this chocolate bar. It's my guilty pleasure!"</p>
-                        <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        <p class="reviewer">- John S.</p>
-                    </div>
-
-                    <h3>Review by Emily M.</h3>
-                    <div class="review">
-                        <p>"Smooth, creamy, and satisfying. I highly recommend it!"</p>
-                        <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        <p class="reviewer">- Emily M.</p>
-                    </div>
-
-                    <h3>Review by Michael R.</h3>
-                    <div class="review">
-                        <p>"The packaging is classy, and the chocolate is pure bliss."</p>
-                        <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        <p class="reviewer">- Michael R.</p>
-                    </div>
-
-                    <h3>Review by Sarah L.</h3>
-                    <div class="review">
-                        <p>"Great value for money. I'll be ordering more for sure!"</p>
-                        <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        <p class="reviewer">- Sarah L.</p>
-                    </div>
-                    <!-- Add more reviews as needed -->
-                </div>
+            <div class="item">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="faq.html">Support center & FAQ</a></li>
+                    <li><a href="protection.html">Purchase protection</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
             </div>
-
-        </main>
-
-
-        <footer>
-            <div id="nav-container">
-                <div class="item">
-                    <h3>Policies</h3>
-                    <ul>
-                        <li><a href="shipping.html">Shipping</a></li>
-                        <li><a href="refound.html">Refund</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <h3>Help</h3>
-                    <ul>
-                        <li><a href="faq.html">Support center & FAQ</a></li>
-                        <li><a href="protection.html">Purchase protection</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li>Mail: <a href="mailto:support@chocolatefactory.com">support@chocolatefactory.com</a>
-                        </li>
-                        <li>Tel: <a href="tel:226-899-9999">226-899-9999</a></li>
-                        <li>
-                            <img class="icon" src="images/facebook-logo.png" alt="facebook">
-                            <img class="icon" src="images/instagram-logo.png" alt="instagram">
-                            <img class="icon" src="images/linkedin.png" alt="linkedin">
-                            <img class="icon" src="images/twitter-logo.png" alt="twitter">
-                        </li>
-                    </ul>
-                </div>
+            <div class="item">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Mail: <a href="mailto:support@chocolatefactory.com">support@chocolatefactory.com</a>
+                    </li>
+                    <li>Tel: <a href="tel:226-899-9999">226-899-9999</a></li>
+                    <li>
+                        <img class="icon" src="images/facebook-logo.png" alt="facebook">
+                        <img class="icon" src="images/instagram-logo.png" alt="instagram">
+                        <img class="icon" src="images/linkedin.png" alt="linkedin">
+                        <img class="icon" src="images/twitter-logo.png" alt="twitter">
+                    </li>
+                </ul>
             </div>
-            <p id="copyright">Copywrite @copy 1990-2100 by Chocolate Factory. All Rights Reserved.</p>
-        </footer>
+        </div>
+        <p id="copyright">Copywrite @copy 1990-2100 by Chocolate Factory. All Rights Reserved.</p>
+    </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="js/cart-data.js"></script>
     <script src="js/api.js"></script>
     <script src="js/products.js"></script>
 </body>

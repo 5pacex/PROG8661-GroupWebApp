@@ -1,9 +1,13 @@
+<!-- Abhishek Choudhary / 8939027 -->
 <!DOCTYPE html>
 
 <head>
     <title> Title </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+
 </head>
 
 <body>
@@ -15,10 +19,10 @@
             <a href="index.html"><img id="logo" src="images/logo.png"></a>
             <div id="searchbar">
                 <input id="searchbox" type="text" placeholder="What are you looking for">
-                <a id="search" href="products.html"><img class="icon" src="images/search.png"></a>
+                <a id="search" href="index.html"><img class="icon" src="images/search.png"></a>
             </div>
             <div id="menu">
-                <a href="products.html">Shop</a>
+                <a href="index.html">Shop</a>
                 <a href="cart.html"><img class="icon" src="images/cart.png" alt="shopping cart"><span
                         class="nav-text">Cart</span></a>
                 <a href="login.html"><img class="icon" src="images/user.png" alt="login"><span
@@ -27,8 +31,18 @@
         </nav>
 
         <main>
-            <div id="wrapper">
+            <div class="slider">
+
+                <ul class="bxslider">
+                    <li><img src="images/banner1.jpg" /></li>
+                    <li><img src="images/banner2.jpg" /></li>
+                    <li><img src="images/banner3.jpg" /></li>
+                </ul>
             </div>
+            <h1>Our Featured Collection</h1>
+            <div class="products-listings" id="product-list">
+            </div><button id="loadProducts">Load More</button>
+
         </main>
 
         <footer>
@@ -52,13 +66,14 @@
                 <div class="item">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li>Mail: <a href="mailto:support@chocolatefactory.com">support@chocolatefactory.com</a></li>
+                        <li>Mail: <a href="mailto:support@chocolatefactory.com">support@chocolatefactory.com</a>
+                        </li>
                         <li>Tel: <a href="tel:226-899-9999">226-899-9999</a></li>
                         <li>
-                            <img class="icon" src="images/facebook-logo.png" alt="facebook">  
-                            <img class="icon" src="images/instagram-logo.png" alt="instagram">  
-                            <img class="icon" src="images/linkedin.png" alt="linkedin">  
-                            <img class="icon" src="images/twitter-logo.png" alt="twitter">  
+                            <img class="icon" src="images/facebook-logo.png" alt="facebook">
+                            <img class="icon" src="images/instagram-logo.png" alt="instagram">
+                            <img class="icon" src="images/linkedin.png" alt="linkedin">
+                            <img class="icon" src="images/twitter-logo.png" alt="twitter">
                         </li>
                     </ul>
                 </div>
@@ -66,6 +81,13 @@
             <p id="copyright">Copywrite @copy 1990-2100 by Chocolate Factory. All Rights Reserved.</p>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart-data.js"></script>
+    <script src="js/products.js"></script>
 </body>
 
 </html>

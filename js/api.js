@@ -1,9 +1,11 @@
+// Abhishek Choudhary / 8939027
 const products = [
   {
     id: 1,
     name: "Milk Chocolate Bar",
     price: 3.99,
-    description: "Smooth and creamy milk chocolate.",
+    description:
+      "Smooth, creamy milk chocolate. Pure indulgence in a bar of velvety richness. Unforgettable delight for chocolate lovers.",
     image: "images/chocolate1.jpg",
     quantity: 1,
   },
@@ -11,7 +13,8 @@ const products = [
     id: 2,
     name: "Dark Chocolate Truffles",
     price: 5.99,
-    description: "Rich and decadent dark chocolate truffles.",
+    description:
+      "Decadent truffles, rich cocoa perfection. Luxurious treats crafted to captivate your taste buds. A sublime chocolate experience awaits.",
     image: "images/chocolate2.jpg",
     quantity: 1,
   },
@@ -19,7 +22,8 @@ const products = [
     id: 3,
     name: "White Chocolate Assortment",
     price: 7.99,
-    description: "A delightful assortment of sweet white chocolates.",
+    description:
+      "Sweet white chocolates, a delightful assortment. Irresistible variety for those who crave the delicate sweetness of white chocolate.",
     image: "images/chocolate3.jpg",
     quantity: 1,
   },
@@ -28,7 +32,7 @@ const products = [
     name: "Hazelnut Praline Bar",
     price: 4.49,
     description:
-      "Crunchy hazelnuts blended with smooth praline in a chocolate bar.",
+      "Crunchy hazelnuts, smooth praline in a chocolate bar. Tempting delight for those seeking the perfect blend of crunch and creaminess.",
     image: "images/OREO-BAG.jpg",
     quantity: 1,
   },
@@ -37,7 +41,7 @@ const products = [
     name: "Caramel-filled Chocolate Hearts",
     price: 6.99,
     description:
-      "Indulge in these heart-shaped chocolates with gooey caramel centers.",
+      "Heart-shaped chocolates with gooey caramel centers. A romantic and delightful indulgence for those with a sweet tooth.",
     image: "images/ESTA-TRUFFLE.jpg",
     quantity: 1,
   },
@@ -46,7 +50,7 @@ const products = [
     name: "Orange Zest Dark Chocolate",
     price: 8.99,
     description:
-      "Dark chocolate infused with natural orange zest for a citrusy twist.",
+      "Dark chocolate infused with natural orange zest. A citrusy twist adds a refreshing note to this decadent chocolate treat.",
     image: "images/chocolate1.jpg",
     quantity: 1,
   },
@@ -55,7 +59,7 @@ const products = [
     name: "Almond Crunch Chocolate Bark",
     price: 9.99,
     description:
-      "Crunchy almond pieces embedded in a delectable chocolate bark.",
+      "Crunchy almond pieces embedded in delectable chocolate bark. A delightful blend of textures and flavors in every bite.",
     image: "images/chocolate2.jpg",
     quantity: 1,
   },
@@ -63,7 +67,8 @@ const products = [
     id: 8,
     name: "Raspberry Filled Chocolates",
     price: 5.49,
-    description: "Delicious chocolates filled with raspberry-flavored ganache.",
+    description:
+      "Chocolates filled with raspberry-flavored ganache. An exquisite balance of sweetness and tartness in each luxurious piece.",
     image: "images/chocolate3.jpg",
     quantity: 1,
   },
@@ -71,7 +76,8 @@ const products = [
     id: 9,
     name: "Mint Chocolate Squares",
     price: 4.99,
-    description: "Refreshing mint-flavored chocolate squares for a cool treat.",
+    description:
+      "Refreshing mint-flavored chocolate squares. Cool treat with a perfect balance of minty freshness and rich chocolate goodness.",
     image: "images/chocolatebox1.jpeg",
     quantity: 1,
   },
@@ -80,7 +86,7 @@ const products = [
     name: "Peanut Butter Cup",
     price: 6.49,
     description:
-      "Classic peanut butter filling encased in smooth milk chocolate.",
+      "Classic peanut butter filling encased in smooth milk chocolate. Iconic indulgence with a perfect blend of sweet and nutty flavors.",
     image: "images/chocolatebox2.jpeg",
     quantity: 1,
   },
