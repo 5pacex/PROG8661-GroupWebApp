@@ -1,3 +1,4 @@
+// Saakshi Rupareliya / 8919997
 $(document).ready(function () {
   const dialogMessage = $("#dialog-message");
   $("#showSignup").click(function () {
@@ -38,7 +39,6 @@ $(document).ready(function () {
     showDialog("Success", "Signup successful. You can now login.");
     $("#signupForm").hide();
     $("#loginForm").show();
-    // Clear the signup form
     $("#signupForm")[0].reset();
   });
 
@@ -59,7 +59,7 @@ $(document).ready(function () {
       ) {
         showDialog("Success", "Login successful");
         localStorage.setItem("login", "true");
-        window.location.replace("products.html");
+        window.location.replace("index.html");
       } else {
         showDialog("Error", "Invalid email or password");
       }

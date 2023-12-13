@@ -54,6 +54,7 @@ $(document).ready(function () {
 
     addToCart($(this).attr("id"));
     $(this).css("background-color", "#a33115");
+
     window.location.href = "cart.html";
   });
 
@@ -100,7 +101,7 @@ $(document).ready(function () {
   productsToShow.forEach((product) => {
     const productDiv = $(`<div class="product" id=${product.id}>`);
     productDiv.html(`
-    <img src="${product.image}" alt="${[product.name]}" id=${product.id}>
+    <img src="${product.image}" alt="${product.name}">
      <div class="product-content" id=${product.id}>
       <div class="product-title">${product.name}</div>
      <div class="product-price">$${product.price}</div>

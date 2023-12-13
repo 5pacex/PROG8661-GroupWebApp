@@ -1,3 +1,4 @@
+// Aayisha Sakkeer/ 8942453
 $(document).ready(function () {
   loadProducts();
   $(".removeItem").click(function () {
@@ -5,7 +6,7 @@ $(document).ready(function () {
     reloadProducts();
   });
 
-  $("#checkout").click(function() {
+  $("#checkout").click(function () {
     window.location.href = "./checkout.html";
   });
 });
@@ -13,7 +14,7 @@ $(document).ready(function () {
 const reloadProducts = () => {
   $("#cart").empty();
   loadProducts();
-}
+};
 
 const loadProducts = () => {
   const cart = loadCartData();
@@ -54,12 +55,12 @@ const loadProducts = () => {
         changeQuantity(product.id, newQuantity);
         $("#" + subtotalId).text(toDollar(product.price * newQuantity));
         updateTotal();
-      }
+      },
     });
   }
 
   updateTotal();
-}
+};
 
 const updateTotal = () => {
   const cart = loadCartData();
@@ -76,4 +77,4 @@ const updateTotal = () => {
 
   const total = subtotal * (1 + HST);
   $("#total").text(toDollar(total));
-}
+};

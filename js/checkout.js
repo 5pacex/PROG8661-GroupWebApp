@@ -1,10 +1,12 @@
+//  Peng liu
+
 $(function () {
-    $.validator.setDefaults({
-        submitHandler: function () {
-            clearCartData();
-            $("#submit-dialog").dialog("open");
-        }
-    });
+  $.validator.setDefaults({
+    submitHandler: function () {
+      clearCartData();
+      $("#submit-dialog").dialog("open");
+    },
+  });
 
   $("#province").selectmenu();
 
@@ -91,30 +93,32 @@ $(function () {
     },
   });
 
-    $("#firstname").focus();
-    loadProducts();
+  $("#firstname").focus();
+  loadProducts();
 });
 
 // load products from shopping cart, then calculate total price.
 const loadProducts = () => {
-    const cart = loadCartData();
-    let html;
-    let subtotal = 0;
-    for(let item of cart) {
-        let product = findProductById(item.id);
-        let quantity = item.quantity;
+  const cart = loadCartData();
+  let html;
+  let subtotal = 0;
+  for (let item of cart) {
+    let product = findProductById(item.id);
+    let quantity = item.quantity;
 
-        let price = product.price * quantity;
-        html += `<tr><td><img class="product-icon" src="${product.image}">${product.name} X ${quantity}</td><td>${toDollar(price)}</td>`
-        subtotal += product.price * quantity; 
-    }
+    let price = product.price * quantity;
+    html += `<tr><td><img class="product-icon" src="${product.image}">${
+      product.name
+    } X ${quantity}</td><td>${toDollar(price)}</td>`;
+    subtotal += product.price * quantity;
+  }
 
-    $("#products").html(html);
-    $("#subtotal").text(toDollar(subtotal));
-    
-    const hst = subtotal * HST;
-    $("#hst").html(toDollar(hst));
+  $("#products").html(html);
+  $("#subtotal").text(toDollar(subtotal));
 
-    const total = subtotal * (1 + HST);
-    $("#total").text(toDollar(total));
-}
+  const hst = subtotal * HST;
+  $("#hst").html(toDollar(hst));
+
+  const total = subtotal * (1 + HST);
+  $("#total").text(toDollar(total));
+};
