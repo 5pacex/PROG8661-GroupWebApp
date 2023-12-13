@@ -14,7 +14,7 @@ $(function () {
     buttons: {
       "Continue shopping": function () {
         $(this).dialog("close");
-        window.location.href = "./products.html";
+        window.location.href = "./index.html";
       },
     },
   });

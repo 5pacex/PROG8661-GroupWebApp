@@ -59,7 +59,7 @@ $(document).ready(function () {
       ) {
         showDialog("Success", "Login successful");
         localStorage.setItem("login", "true");
-        window.location.replace("products.html");
+        window.location.replace("index.html");
       } else {
         showDialog("Error", "Invalid email or password");
       }
