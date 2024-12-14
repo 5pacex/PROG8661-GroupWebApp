@@ -1,5 +1,4 @@
 /*
- * Aayisha
  * Peng
  */
 $(document).ready(function () {

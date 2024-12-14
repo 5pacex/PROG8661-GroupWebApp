@@ -1,4 +1,4 @@
-// Saakshi Rupareliya / 8919997
+// Abhishek Choudhary
 $(document).ready(function () {
   const dialogMessage = $("#dialog-message");
   $("#showSignup").click(function () {
